@@ -57,30 +57,6 @@ const Navbar = () => {
             >
               useTransition
             </NavLink>
-            <NavLink
-              to="/test"
-              className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
-                  isActive
-                    ? "bg-white text-green-600 shadow-md"
-                    : "hover:bg-white/20"
-                }`
-              }
-            >
-              Test
-            </NavLink>
-            <NavLink
-              to="/test2"
-              className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
-                  isActive
-                    ? "bg-white text-green-600 shadow-md"
-                    : "hover:bg-white/20"
-                }`
-              }
-            >
-              Test2
-            </NavLink>
           </div>
         </div>
       </div>

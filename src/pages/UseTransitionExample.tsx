@@ -9,11 +9,9 @@ function UseTransitionExample() {
     const value = e.target.value;
     setInput(value);
 
-    // Mark this expensive update as non-urgent using startTransition
     startTransition(() => {
-      // Generate a large list based on input (simulating expensive operation)
       const newList: string[] = [];
-      for (let i = 0; i < 10000; i++) {
+      for (let i = 0; i < 30000; i++) {
         newList.push(`${value} - Item ${i}`);
       }
       setList(newList);
@@ -71,7 +69,7 @@ function UseTransitionExample() {
           </p>
           <p className="text-sm text-gray-600 mb-3">Showing first 20 items:</p>
           <div className="max-h-64 overflow-y-auto space-y-1">
-            {list.slice(0, 20).map((item, index) => (
+            {list.map((item, index) => (
               <div
                 key={index}
                 className="text-sm text-gray-700 py-1 px-2 bg-gray-50 rounded"

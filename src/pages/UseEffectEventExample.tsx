@@ -3,18 +3,19 @@ import { useEffect, useState, useEffectEvent } from "react";
 export default function CounterLogger() {
   const [count, setCount] = useState(0);
 
-  // Always sees the latest count
   const logCount = useEffectEvent(() => {
-    console.log("Current count:", count);
+    console.log("Current count value:", count);
   });
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      logCount(); // latest count, no stale closure
-    }, 2000);
+      logCount();
+    }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, []); // count is NOT needed here
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <div>

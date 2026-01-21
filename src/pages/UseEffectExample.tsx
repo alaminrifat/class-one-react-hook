@@ -15,7 +15,6 @@ function UseEffectExample() {
   const [error, setError] = useState<string>("");
 
   const fetchComments = async () => {
-    console.log("Fetching comments...");
     try {
       setLoading(true);
       setError("");
@@ -39,9 +38,15 @@ function UseEffectExample() {
       console.error("❌ Error fetching comments:", err);
     }
   };
+
   useEffect(() => {
+    console.log("I am coming in");
     fetchComments();
-  }, [count]); //eslint-disable-line react-hooks/exhaustive-deps
+
+    return () => {
+      console.log("I am going out");
+    };
+  }, [count]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="max-w-4xl mx-auto p-8">
@@ -107,6 +112,7 @@ function UseEffectExample() {
       </div>
 
       <div className="bg-purple-50 rounded-lg p-6 mb-6">
+        <h3 className="text-lg font-semibold mb-4 text-purple-900">{count}</h3>
         <div className="mb-4">
           <button
             onClick={() => setCount(count + 1)}

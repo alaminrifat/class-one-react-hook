@@ -69,6 +69,18 @@ const Navbar = () => {
             >
               useFormStatus
             </NavLink>
+            <NavLink
+              to="/usedeferredvalue"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
+                  isActive
+                    ? "bg-white text-indigo-600 shadow-md"
+                    : "hover:bg-white/20"
+                }`
+              }
+            >
+              useDeferredValue
+            </NavLink>
           </div>
         </div>
       </div>

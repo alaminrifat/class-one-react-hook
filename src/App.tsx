@@ -5,6 +5,7 @@ import UseEffectExample from "./pages/UseEffectExample";
 import UseEffectEventExample from "./pages/UseEffectEventExample";
 import UseTransitionExample from "./pages/UseTransitionExample";
 import UseFormStatusExample from "./pages/UseFormStatusExample";
+import UseDeferredValueExample from "./pages/UseDeferredValueExample";
 // import TestPage from "./pages/Test";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/useeffectevent" element={<UseEffectEventExample />} />
         <Route path="/usetransition" element={<UseTransitionExample />} />
         <Route path="/useformstatus" element={<UseFormStatusExample />} />
+        <Route path="/usedeferredvalue" element={<UseDeferredValueExample />} />
       </Routes>
     </div>
   );

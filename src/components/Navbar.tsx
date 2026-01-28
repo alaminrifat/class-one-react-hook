@@ -57,6 +57,18 @@ const Navbar = () => {
             >
               useTransition
             </NavLink>
+            <NavLink
+              to="/useformstatus"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
+                  isActive
+                    ? "bg-white text-orange-600 shadow-md"
+                    : "hover:bg-white/20"
+                }`
+              }
+            >
+              useFormStatus
+            </NavLink>
           </div>
         </div>
       </div>

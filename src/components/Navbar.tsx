@@ -81,6 +81,30 @@ const Navbar = () => {
             >
               useDeferredValue
             </NavLink>
+            <NavLink
+              to="/swr"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
+                  isActive
+                    ? "bg-white text-blue-600 shadow-md"
+                    : "hover:bg-white/20"
+                }`
+              }
+            >
+              SWR
+            </NavLink>
+            <NavLink
+              to="/react-query"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
+                  isActive
+                    ? "bg-white text-indigo-600 shadow-md"
+                    : "hover:bg-white/20"
+                }`
+              }
+            >
+              React Query
+            </NavLink>
           </div>
         </div>
       </div>

@@ -8,6 +8,10 @@ import UseFormStatusExample from "./pages/UseFormStatusExample";
 import UseDeferredValueExample from "./pages/UseDeferredValueExample";
 import SWRExample from "./pages/SWRExample";
 import ReactQueryExample from "./pages/ReactQueryExample";
+import MemoExample from "./pages/MemoExample";
+import UseMemoExample from "./pages/UseMemoExample";
+import UseCallbackExample from "./pages/UseCallbackExample";
+import Playground from "./pages/Playground";
 // import TestPage from "./pages/Test";
 
 function App() {
@@ -23,6 +27,10 @@ function App() {
         <Route path="/usedeferredvalue" element={<UseDeferredValueExample />} />
         <Route path="/swr" element={<SWRExample />} />
         <Route path="/react-query" element={<ReactQueryExample />} />
+        <Route path="/memo" element={<MemoExample />} />
+        <Route path="/usememo" element={<UseMemoExample />} />
+        <Route path="/usecallback" element={<UseCallbackExample />} />
+        <Route path="/playground" element={<Playground />} />
       </Routes>
     </div>
   );
